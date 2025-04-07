@@ -1,0 +1,1297 @@
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(0 0 0 / 0.5);
+  /* --bblur: rgba(73, 80, 212, 0.591); */
+  --bblur: rgba(1, 23, 84, 0.591);
+  --cblur: rgba(201, 195, 179, 0.591);
+  --gd: rgba(212, 161, 73, 0.591);
+  --wh: rgba(255, 255, 255, 0.779);
+  --gs: rgba(212, 161, 73, 0.138);
+  --gold: rgb(212, 161, 73);
+  --font: #5f4823;
+  --gy: #313131;
+  --gyl: #c8c2ae;
+  --telang: #011754;
+  --blue: #d1d6ff;
+  --cream: #e8e3da;
+  --bw: #f0f0f0;
+  --biru: #6178a5;
+  --creame: #c9c3b3;
+}
+
+#myVideo {
+  position: fixed;
+  /* display: block; */
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+}
+@font-face {
+  font-family: Saudagar;
+  src: url(font/Saudagar.ttf) format("truetype");
+}
+@font-face {
+  font-family: England;
+  src: url(font/England.ttf) format("truetype");
+}
+@font-face {
+  font-family: Batusa;
+  src: url(font/Batusa.otf) format("opentype");
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+}
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 4000px;
+  /* background-color: var(--creame); */
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 2%,
+      #fff8ed 100%
+    ),
+    url(img/OURHANDS.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  /* margin: 10px; */
+  /* background-color: rgba(255, 255, 255, 0.05) !important; */
+  /* background: linear-gradient(
+    180deg,
+    rgb(97, 120, 165) 8%,
+    rgba(255, 255, 255, 0) 30%
+  ); */
+}
+
+.arrow {
+  position: fixed;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 0.8vw;
+  height: 0.8vw;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  border-right: 5px solid rgb(0, 0, 0);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 1s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+/* body nav {
+  position: static;
+} */
+
+/* .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 415px;
+  height: 100%;
+} */
+.scroll p {
+  position: fixed;
+  top: 78%;
+  left: 55%;
+  font-family: "Saudagar";
+  font-size: 2rem;
+  color: var(--telang);
+}
+.wedding p {
+  position: fixed;
+  top: 85%;
+  left: 48%;
+  font-family: "Saudagar";
+  font-size: 3rem;
+  color: var(--telang);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(img/bg-prewed.jpg); */
+  background-size: cover;
+  background-position: center;
+  /* background-color: rgba(40, 38, 38, 0.164); */
+  z-index: -1;
+  /* filter: grayscale(); */
+}
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  /* background-color: var(--blue); */
+  background-color: var(--bw);
+  padding-top: 4rem;
+  background-image: url(img/BG2.png);
+  background-size: cover;
+  background-position: center;
+  /* border-radius: 2vh;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1rem; */
+  z-index: 1;
+}
+/*  */
+.hero .blur {
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  min-height: 100vh;
+  /* background-image: url(img/bg-depan2.png); */
+}
+.hero .logo {
+  padding: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  border-radius: 2vh;
+  /* background-color: var(--bw); */
+}
+.hero .bunga {
+  padding: 1rem;
+  transform: translateY(20px);
+  background-image: url(img/Asset6.png) !important;
+}
+
+/* .hero .spasi {
+  padding: 2rem;
+} */
+
+.hero h1 {
+  /* font-family: "Great Vibes", cursive; */
+  font-family: "Saudagar";
+  font-size: 3.5rem;
+  /* margin-top: px; */
+  color: var(--telang);
+  font-weight: bolder;
+}
+
+.hero h4 {
+  font-size: 2rem;
+  font-family: "Batusa", serif;
+  color: var(--telang);
+}
+
+.hero h5 {
+  margin-top: 8rem;
+}
+
+.hero p {
+  /* text-shadow: var(--shadow); */
+  font-size: 1.2rem;
+  font-family: "Batusa";
+  color: var(--telang);
+}
+
+.hero a {
+  color: var(--bw);
+  background-color: var(--biru);
+  /* box-shadow: var(--shadow); */
+  /* font-weight: bolder; */
+  font-family: batusa;
+  font-size: 12px;
+}
+
+.hero a:hover {
+  background-color: var(--telang);
+  color: var(--biru);
+}
+
+/* .mynavbar {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+} */
+
+.home {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  /* background-image: url(img/bg-prewed.jpg); */
+  background-size: cover;
+  background-position: center;
+  /* background-size: cover; */
+  /* background: var(--pink); */
+  /* background-color: rgba(40, 38, 38, 0.748) !important; */
+  background-color: var(--telang);
+  /* backdrop-filter: blur(15px); */
+  background-color: #ffffff;
+  background-image: url(img/BG.jpg) !important;
+  /* background: var(--bg); */
+  /* min-height: 100vh; */
+  /* margin-top: 6rem; */
+  /* padding-top: 20rem; */
+  padding: 1rem;
+  /* margin: 10%; */
+  margin: 10px;
+  border-radius: 2vh;
+  /* z-index: -1; */
+}
+.open {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  /* background-image: url(img/bg-prewed.jpg) !important; */
+  background-size: cover;
+  background-position: center;
+  /* background-size: cover; */
+  /* background: var(--pink); */
+  /* background-color: rgba(40, 38, 38, 0.748) !important; */
+  background-color: var(--blue);
+  /* backdrop-filter: blur(15px); */
+  /* background-image: url(img/Asset-8.png) !important; */
+  background-image: url(img/BG.jpg) !important;
+  /* background: var(--bg); */
+  min-height: 100vh;
+  margin-top: 2rem;
+  /* padding-top: 20rem; */
+  padding: 2rem;
+  /* margin: 10%; */
+  margin: 10px;
+  border-radius: 2vh;
+  /* z-index: -1; */
+}
+
+.home h2,
+.info h2,
+.gallery h2 {
+  color: white;
+  font-family: "Saudagar";
+  font-size: 3rem;
+  /* font-weight: bold; */
+  /* margin-top: 2rem; */
+}
+
+.home h2 {
+  margin-top: 3rem;
+  /* font-weight: bold; */
+  /* color: white */
+}
+
+.home h3,
+.open h3 {
+  color: #eaeaea;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "";
+  font-weight: bolder;
+  /* margin-bottom: 1rem; */
+}
+
+.story h3 {
+  color: var(--bg);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "";
+  font-weight: bolder;
+  /* margin-bottom: 1rem; */
+}
+
+.home p {
+  font-size: 1.1rem;
+  color: var(--telang);
+  /* font-family: "Batusa"; */
+  /* background-color: var(--gd);
+  backdrop-filter: blur(5px);
+  border-radius: 2vh; */
+  /* padding: 20px;
+  margin: 10px; */
+}
+
+.home .dan {
+  font-size: 8rem;
+  font-family: "Saudagar";
+  color: var(--telang);
+}
+
+.open p {
+  font-size: 1.5rem;
+  color: var(--telang) !important;
+  /* text-shadow: var(--shadow); */
+  padding: 10px;
+  /* margin-top: 4rem; */
+  font-family: "Batusa";
+}
+.open p {
+  font-size: 1.5rem;
+  color: var(--telang) !important;
+  /* text-shadow: var(--shadow); */
+  padding: 10px;
+  /* margin-top: 4rem; */
+  font-family: "Batusa";
+}
+
+.home .namapengantin {
+  font-family: Batusa;
+  color: var(--bw);
+  font-size: 2.5rem;
+  transform: translateY(150%);
+}
+
+.home .couple,
+.open .couple {
+  /* background-color: var(--gd); */
+  /* backdrop-filter: blur(5px); */
+  border-radius: 2vh;
+  padding: 20px;
+  /* margin: 10px; */
+  margin-top: 10px;
+}
+
+.home .couple h3,
+.open .couple h3 {
+  font-family: "Saudagar";
+  font-size: 2.4rem;
+  color: white;
+}
+.open .couple .gambar {
+  /* background-color: var(--telang); */
+  width: 80%;
+  border-radius: 2vh;
+  /* height: 20rem; */
+  /* padding: 2rem; */
+  font-size: x-large;
+  font-family: "Batusa";
+  /* transform: translateY(70px); */
+}
+.open .couple .gambar-foto {
+  /* background-color: var(--telang); */
+  width: 100%;
+  border-radius: 2vh;
+  /* height: 20rem; */
+  /* padding: 2rem; */
+  font-size: x-large;
+  font-family: "Batusa";
+  /* transform: translateY(70px); */
+}
+
+.home .couple p {
+  font-size: 1.5rem;
+  /* font-weight: bold;
+  font-family: "Batusa"; */
+}
+
+.home .couple img {
+  width: 100%;
+  border-radius: 140px 140px 0px 0px;
+  /* background-color: ; */
+}
+
+.home .heart {
+  width: 20vh;
+  /* height: auto; */
+  /* background-color: white; */
+  display: flex;
+  border-radius: 50%;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(65px);
+}
+
+/* .home span .heart {
+  margin: auto;
+  color: var(--pink);
+  padding: 10px;
+} */
+
+.home .kotak {
+  background-color: var(--wh);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  transform: translateY(-50px);
+  border-radius: 2vh;
+  /* background-image: url(img/AdatJawaOrnament8-1.png); */
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 10px 8px #0a0a0a65;
+}
+
+.open .kotak {
+  background-color: var(--cblur);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  transform: translateY(-30px);
+  border-radius: 2vh;
+  box-shadow: 0px 10px 8px #0a0a0a65;
+}
+
+.open .kotak h3 {
+  font-size: medium;
+  font-weight: bolder;
+  font-family: Batusa;
+  color: var(--telang);
+}
+.home .kotak h3 {
+  font-size: 2rem;
+  font-family: Batusa;
+  color: var(--telang);
+}
+.home .kotak p {
+  /* font-family: "Batusa"; */
+  font-size: 1.5rem;
+  margin-top: 1.1rem;
+  color: var(--telang);
+}
+
+.open .kotak p {
+  font-family: "Batusa";
+  /* font-weight: bolder; */
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: var(--telang) !important;
+}
+.open .kotak .tanggal {
+  font-family: "Batusa";
+  /* font-weight: bolder; */
+  font-size: 1.8rem;
+  /* margin-top: 1rem; */
+  color: var(--telang) !important;
+}
+
+.home .kotak a {
+  color: var(--telang);
+}
+
+.akad {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  /* background: var(--pink); */
+  /* background-color: rgba(255, 255, 255, 0.008) !important; */
+  /* background-color: rgba(40, 38, 38, 0.554) !important; */
+  /* backdrop-filter: blur(15px); */
+  background-image: url(img/BG.jpg);
+  /* color: white; */
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  margin: 10px;
+  border-radius: 2vh;
+  min-height: 100vh;
+}
+.akad .ring {
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.akad h2,
+.gifts h2,
+.rsvp h2 {
+  color: var(--telang) !important;
+  font-family: "Saudagar";
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  font-weight: bolder;
+}
+
+.akad strong {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: var(--telang);
+  font-family: "Saudagar";
+  font-weight: bolder;
+}
+.akad .alamat {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  color: var(--telang);
+}
+.akad .border {
+  /* background-color: #011754; */
+  border-radius: 1vh;
+  color: var(--telang);
+  margin-bottom: 1rem;
+}
+.akad p {
+  /* font-weight: bolder; */
+  font-size: 1.2rem;
+  padding-top: 10px;
+}
+.akad .map-body {
+  border-radius: 2vh;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* overflow: hidden; */
+  margin: 10px auto;
+}
+
+.akad .jam {
+  color: var(--telang);
+}
+
+.akad .button-map {
+  background-color: var(--telang) !important;
+  border: none;
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.info {
+  background-color: var(--bg);
+  /* background: var(--pink); */
+  /* background-color: rgba(255, 255, 255, 0.008) !important; */
+  /* background-color: rgba(40, 38, 38, 0.554) !important; */
+  backdrop-filter: blur(15px);
+  /* background-image: url(img/bg-prewed.jpg); */
+  color: white;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  margin: 10px;
+  border-radius: 2vh;
+}
+
+.info .map-body {
+  border-radius: 2vh;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.info .alamat {
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.info .card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid #999;
+}
+
+.info .card-header {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  font-family: "Saudagar";
+}
+
+.info .card-body {
+  font-size: 1.2rem;
+}
+
+.info .card-footer {
+  border-top: 1px solid #999;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* .gifts {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  background-color: #0a0a0a;
+  background-color: rgba(212, 160, 73, 0.4);
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
+  z-index: 9 !important;
+  position: relative; */
+/* transform: translateX(0px) translateY(-50px); */
+/* transform-origin: ;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+} */
+
+.gifts {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  /* background-image: url(img/BG2.png); */
+  background-color: var(--creame) !important;
+  /* background-color: rgba(255, 255, 255, 0.05) !important; */
+  /* background: linear-gradient(
+    180deg,
+    rgb(97, 120, 165) 8%,
+    rgba(255, 255, 255, 0) 30%
+  ); */
+}
+
+.gifts p {
+  color: var(--telang);
+  font-size: 1.5rem;
+}
+.gifts ul {
+  background-color: var(--wh);
+  backdrop-filter: blur(5px);
+  border-radius: 2vh;
+  padding: 20px;
+  margin: 10px;
+  color: var(--font);
+  /* font-family: "Batusa"; */
+  /* font-weight: bolder; */
+}
+
+.gifts .input {
+  border: none;
+  background-color: rgb(243 242 238);
+  font-size: 1.5rem;
+  color: #5f4823 !important;
+  font-weight: bolder;
+}
+.gifts button {
+  background-color: var(--creame) !important;
+  border: none;
+  color: #5f4823 !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.story {
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  background-image: url(img/BG.jpg);
+  /* background-color: var(--telang) !important; */
+}
+.gallery {
+  padding-top: 2rem;
+  /* padding-bottom: 2rem; */
+  background-color: var(--bw) !important;
+}
+.story h2 {
+  color: var(--blue);
+  font-family: "Saudagar";
+  font-size: 3rem;
+}
+.gallery h2 {
+  color: var(--telang);
+  font-family: "Saudagar";
+  font-size: 3rem;
+}
+
+.story span {
+  text-transform: uppercase;
+  color: var(--telang);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+.gallery .span {
+  text-transform: uppercase;
+  color: var(--telang);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+}
+
+.gifts span {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gallery .carousel-indicators button.thumbnail {
+  width: 100px;
+}
+.gallery .carousel-indicators button.thumbnail:not(.active) {
+  opacity: 0.7;
+}
+.gallery .carousel-indicators {
+  transform: translateY(200%);
+  position: absolute;
+}
+
+.story p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--telang);
+}
+.galery p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+}
+
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1px;
+  background-color: #ccc;
+  left: 15%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 160px;
+  height: 160px;
+  background-color: #ccc;
+  position: absolute;
+  left: 15%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+  width: 40%;
+  float: right;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* .timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ff0000;
+  border-right: 0 solid #ffffff;
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #ff0000;
+  border-right: 0 solid #3805f1;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
+} */
+
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
+}
+
+.gallery {
+  background-color: #f5f5f5;
+}
+
+.rsvp {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  padding: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  background-image: url(img/BG.jpg);
+  /* min-height: 100vh; */
+}
+.rsvp h1 {
+  color: var(--telang);
+  font-size: 1.5rem;
+}
+.rsvp h2 {
+  font-size: 3rem;
+}
+
+.rsvp p {
+  color: var(--telang);
+  /* font-family: "Saudagar"; */
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  /* margin-top: 2rem; */
+}
+
+.rsvp form label {
+  color: var(--telang);
+  font-weight: bold;
+}
+
+.rsvp button {
+  background-color: var(--telang);
+  color: white;
+  border: 1px solid black;
+  height: auto;
+}
+
+.rsvp button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+
+.penutup {
+  /* background-color: #c8c2ae; */
+  /* background-color: white; */
+  backdrop-filter: blur(15px);
+  /* background-image: url(img/AdatJawaPattern1.webp); */
+  /* padding: 4rem; */
+  font-family: Batusa;
+  /* margin: 10px; */
+  /* border-radius: 2vh; */
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 30vh;
+  /* background-color: var(--blue); */
+  /* background-color: var(--bw); */
+  background-image: url(img/OURHANDS.jpg) !important;
+  /* filter: grayscale(); */
+  background-size: cover;
+  background-position: center;
+}
+
+.penutup .ungkapan {
+  /* background-color: var(--bw); */
+  /* background-image: url(img/AdatJawaPattern1.webp); */
+  /* background-image: url(img/OURHANDS.png); */
+  padding: 3rem;
+  /* padding-top: 5rem; */
+  /* border-radius: 2vh; */
+}
+
+.penutup .ungkapan h5 {
+  font-size: 1.2rem;
+  /* margin: 4rem; */
+  color: #666666;
+  padding: 2rem;
+}
+.penutup .ungkapan h1 {
+  color: #292929;
+  font-size: 2rem;
+  /* margin: 3rem; */
+  font-family: Saudagar;
+  font-weight: bolder;
+}
+
+.penutup .ungkapan .hadits {
+  color: #666666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.penutup h2 {
+  color: #292929;
+  font-family: Saudagar;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  /* margin-top: 2rem; */
+}
+
+.penutup p {
+  color: #292929;
+  font-family: Batusa;
+  padding: 2rem;
+}
+
+.penutup p span {
+  font-weight: bold;
+  font-family: Batusa;
+}
+
+.penutup h1 {
+  font-family: Saudagar;
+  /* font-weight: bolder; */
+  color: #292929;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+footer {
+  padding: 3rem;
+  background-color: var(--creame);
+  color: #666666;
+}
+
+footer a {
+  color: #666666;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Batusa";
+}
+
+/* footer a:hover {
+  color: white;
+} */
+
+footer .label h1 {
+  color: #292929;
+  font-weight: bolder;
+  /* font-size: 2rem; */
+  font-family: "Saudagar";
+}
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+
+.audio-icon-wrapper,
+.audio-icon-wrapper .btn {
+  width: 4rem;
+  height: 4rem;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: rgb(56, 56, 56) !important;
+  opacity: 0.5;
+  /* mix-blend-mode: difference; */
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+.arrow-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 93rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: -50rem;
+  cursor: pointer;
+  color: rgb(232, 15, 15) !important;
+  opacity: 0.5;
+  /* mix-blend-mode: difference; */
+  /* animation: rotating 4s linear infinite; */
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query */
+/* Extra large */
+@media (max-width: 1200px) {
+  .home .heart {
+    transform: translateX(-50%) translateY(45px);
+  }
+}
+
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 70px;
+  }
+
+  .home .heart {
+    display: none;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+  }
+
+  .timeline li .timeline-panel {
+    width: calc((100% - 200px));
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
+  .akad {
+    min-height: 70vh;
+  }
+
+  .arrow {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+    cursor: pointer;
+  }
+
+  .scroll p {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    font-family: "Saudagar";
+    font-size: 2rem;
+    color: var(--telang);
+  }
+  .wedding p {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    font-family: "Saudagar";
+    font-size: 3rem;
+    color: var(--telang);
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 60px;
+    margin: 5px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .timeline li .timeline-image {
+    width: 140px;
+    height: 140px;
+  }
+  .arrow {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+    cursor: pointer;
+  }
+
+  .scroll p {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    font-family: "Saudagar";
+    font-size: 1rem;
+    color: var(--telang);
+  }
+  .wedding p {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    font-family: "Saudagar";
+    font-size: 2rem;
+    color: var(--telang);
+  }
+}
+
+/* mobile phone */
+
+@media (max-width: 572px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 45px;
+    margin: 3px;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 31px;
+  }
+  .akad {
+    min-height: 70vh;
+  }
+
+  .arrow {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+    cursor: pointer;
+  }
+
+  .scroll p {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    font-family: "Saudagar";
+    font-size: 1rem;
+    color: var(--telang);
+  }
+  .wedding p {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    font-family: "Saudagar";
+    font-size: 2rem;
+    color: var(--telang);
+  }
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 3px;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 31px;
+  }
+}
